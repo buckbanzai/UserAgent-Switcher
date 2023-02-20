@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Sets the User Agent header to one from Google Chrome when accessing Talkdesk sites, as they block any other User Agent.",
   "permissions": [
-    "declarativeNetRequest"
+    "declarativeNetRequestWithHostAccess"
   ],
   "host_permissions": [
     "*://*.talkdesk.com/*",
@@ -23,7 +23,7 @@
   "declarative_net_request": {
     "rule_resources": [
       {
-        "id": "talkdesk_useragent",
+        "id": "talkdesk_useragent_ruleset",
         "enabled": true,
         "path": "talkdesk_useragent_rule.json"
       }
