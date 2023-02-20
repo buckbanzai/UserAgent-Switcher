@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Talkdesk User Agent Switcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sets the User Agent header to one from Google Chrome when accessing Talkdesk sites, as they block any other User Agent.",
   "permissions": [
     "declarativeNetRequestWithHostAccess"
