@@ -1,35 +1,33 @@
 {
   "manifest_version": 3,
-  "name": "__MSG_extensionName__",
-  "version": "0.6.0",
-  "default_locale": "en",
-  "description": "__MSG_extensionDescription__",
+  "name": "Talkdesk User Agent Switcher",
+  "version": "1.0.0",
+  "description": "Sets the User Agent header to one from Google Chrome when accessing Talkdesk sites, as they block any other User Agent.",
   "permissions": [
-    "storage",
-    "scripting",
-    "webNavigation",
-    "webRequest",
-    "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
-    "contextMenus"
+    "declarativeNetRequest"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "*://*.talkdesk.com/*",
+    "*://*.talkdeskid.com/*",
+    "*://*.mytalkdesk.com/*",
+    "*://*.talkdeskapp.com/*"
   ],
   "icons": {
-    "16": "data/icons/active/16.png",
-    "32": "data/icons/active/32.png",
-    "48": "data/icons/active/48.png",
-    "64": "data/icons/active/64.png",
-    "128": "data/icons/active/128.png",
-    "256": "data/icons/active/256.png"
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png",
+    "256": "icons/256.png"
   },
-  "storage": {
-    "managed_schema": "schema.json"
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "talkdesk_useragent",
+        "enabled": true,
+        "path": "talkdesk_useragent_rule.json"
+      }
+    ]
   },
-  "background":{
-    "service_worker": "worker.js"
-  },
-  "action": {},
-  "homepage_url": "https://add0n.com/useragent-switcher.html"
+  "homepage_url": "https://github.com/buckbanzai/UserAgent-Switcher"
 }
