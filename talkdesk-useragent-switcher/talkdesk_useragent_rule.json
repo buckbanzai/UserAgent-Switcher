@@ -1,13 +1,21 @@
-[{
-    "id" : 1,
+[
+  {
+    "id": 1,
     "priority": 1,
     "action": {
-        "type": "modifyHeaders",
-        "requestHeaders": [{
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
           "operation": "set",
-          "header": "user-agent",
+          "header": "User-Agent",
           "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
-        }]
-      },
-    "condition" : {}
-  }]
+        }
+      ]
+    },
+    "condition": {
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
